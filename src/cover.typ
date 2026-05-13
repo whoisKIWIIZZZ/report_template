@@ -36,22 +36,22 @@
     #v(4em)
 
     #let info = (:)
-    if major != none { info.insert("专  业  名  称", major) }
-    if course-name != none { info.insert("课  程  名  称", course-name) }
-    if instructor != none { info.insert("指  导  教  师", instructor) }
-    if student-id != none { info.insert("学  生  学  号", student-id) }
-    if student-name != none { info.insert("学  生  姓  名", student-name) }
+    #if major != none { info.insert("专  业  名  称", major) }
+    #if course-name != none { info.insert("课  程  名  称", course-name) }
+    #if instructor != none { info.insert("指  导  教  师", instructor) }
+    #if student-id != none { info.insert("学  生  学  号", student-id) }
+    #if student-name != none { info.insert("学  生  姓  名", student-name) }
 
-    #for (label, value) in info {
-      grid(
-        columns: (auto, auto),
-        row-gutter: 1.5em,
-        column-gutter: 1em,
-        align: (right, left),
+    #grid(
+      columns: (auto, auto),
+      row-gutter: 1.5em,
+      column-gutter: 1em,
+      align: (right + horizon, left + horizon), // 保持标签右对齐，内容左对齐
+      ..info.pairs().map(((label, value)) => (
         text(size: 14pt, weight: "bold")[#label :],
         text(size: 14pt)[#value],
-      )
-    }
+      )).flatten()
+    )
 
     #v(1fr)
     #if date != none {

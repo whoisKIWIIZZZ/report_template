@@ -57,7 +57,7 @@
   show-toc: true,
   toc-title: none,
   toc-depth: 3,
-  code-theme: none,
+  code-theme: "../assets/code.tmTheme",
   mono-font: ("Jetbrains Mono", "Songti SC"),
   cn-serif: ("Latin Modern Roman", "Songti SC"),
 
@@ -120,6 +120,37 @@
     )
     pagebreak()
   }
+  set raw(theme: "../assets/code.tmTheme")
+  show raw.where(block: true): it => {
+  let lang = if it.has("lang") { it.lang } else { "TEXT" }
+  set text(size: 9pt,font: ("Jetbrains Mono","SongTi SC"))
+  block(
+    fill: rgb("#FAFAF9"),
+    stroke: 0.5pt + rgb("#CCD1D9"),
+    radius: 3pt,
+    width: 100%,
+    inset: 0pt,
+    clip: true,
+    
+      block(
+        width: 100%,
+        inset: 12pt,
+        it,
+      ),
+    
+  )
+}
+show raw.where(block: false): it => {
+    set text(size: 10pt,font: ("JetBrains Mono NL","SongTi SC"),rgb("#A9504A"),)
+    box(
+  
+  fill: rgb("#E5E5E4"),
+  inset: (x: 2pt, y: 0pt),
+  outset: (y: 3pt),
+  radius: 4pt,
+  it,
+)
+}
 
   // Main content
   set page(numbering: "1")
@@ -137,6 +168,7 @@
 /// = 附录
 /// == 代码段
 #let appendix-style(it) = {
+  counter(heading).update((0, 0))
   show heading.where(level: 1): it => {
     set align(center)
     set text(size: 1.5em)
@@ -144,7 +176,6 @@
     it
     v(0.8em)
   }
-  counter(heading).update((1, 0))
   set heading(numbering: "A.1")
   it
 }
