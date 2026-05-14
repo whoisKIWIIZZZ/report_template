@@ -9,10 +9,10 @@
 
 #show: whu-report.with(
   subtitle: "线性回归实验报告",
-  instructor: "丁立新",
-  student-id: "2024300001103",
-  student-name: "易守拙",
-  major: "计算机弘毅班",
+  instructor: "DLX",
+  student-id: "**",
+  student-name: "**",
+  major: "CSHY",
   course-name: "机器学习",
   date: "二○二六年五月",
 )
@@ -41,7 +41,7 @@
 | `show-toc` | bool | `true` | 是否显示目录 |
 | `toc-depth` | int | `3` | 目录深度 |
 | `code-theme` | str | none | 代码高亮主题路径 |
-| `mono-font` | str,array | `("Jetbrains Mono", "Songti SC")` | 等宽字体 |
+| `mono-font` | str,array | `("Jetbrains Mono"")` | 等宽字体 |
 | `cn-serif` | str,array | `("Latin Modern Roman", "Songti SC")` | 衬线字体 |
 
 ## 附录样式

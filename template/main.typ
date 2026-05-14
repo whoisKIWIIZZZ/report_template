@@ -15,34 +15,33 @@
 
 = 概述
 
-在这里写概述内容。
+笔者苦于ML实验报告,利用空余时间完成了这个模版的设计.
 
-= 算法模型
+段落空两格需要在*标题后*换行后进行.
+== 公式
 
-== 第一节
+公式呈现紫色.例如,$lambda = 36+6sqrt(114)$.以及,
+$
 
-内容...
-
-= 实验代码
-
-== 第一节
-
-```py
-# Python 代码示例
-def hello():
-    print("Hello, Typst!")
-```
-
-= 总结
-
-总结内容...
-
-#pagebreak()
-
-#show: appendix-style
-
-= 附录
-
+f(x)f(x+lambda y)f(x+3/2 f(2y)) = x(x+lambda y)f(x+2y)+f(x)f(y)f(x+lambda y).
+$
 == 代码段
 
-附录内容...
+内联代码用红色字体,为了拟合markdown preview的效果.`python`
+
+代码块内容如下:
+```py
+def train_target():
+  acc+=0.1
+  print("sota")
+```
+#pagebreak()
+#show: appendix-style
+= 附录
+
+附录的调用需要如下实现:
+```typ
+#pagebreak()
+#show: appendix-style
+= 附录
+```

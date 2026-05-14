@@ -7,9 +7,9 @@
 /// #show: whu-report.with(
 ///   course: "计算机学院",
 ///   subtitle: "线性回归实验报告",
-///   instructor: "丁立新",
-///   student-id: "2024300001103",
-///   student-name: "易守拙",
+///   instructor: "DLX",
+///   student-id: "202430000****",
+///   student-name: "whoisKIWIIZZZ",
 ///   major: "计算机弘毅班",
 ///   course-name: "机器学习",
 /// )
@@ -58,7 +58,7 @@
   toc-title: none,
   toc-depth: 3,
   code-theme: "../assets/code.tmTheme",
-  mono-font: ("Jetbrains Mono", "Songti SC"),
+  mono-font: ("Jetbrains Mono"),
   cn-serif: ("Latin Modern Roman", "Songti SC"),
 
   body,

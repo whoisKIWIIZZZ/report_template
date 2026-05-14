@@ -2,14 +2,14 @@
 name = "whu-report"
 version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["易守拙 <whoisKIWIIZZZ>"]
+authors = ["Shouzhuo Yi <@whoisKIWIIZZZ>"]
 license = "MIT"
-description = "武汉大学计算机学院本科生课程设计报告模板"
+description = "Course report template for Wuhan University.武汉大学计算机学院本科生课程设计报告."
 repository = "https://github.com/whoisKIWIIZZZ/report_template"
 keywords = ["report", "whu", "course", "chinese"]
-categories = ["report"]
+categories = ["report", "thesis"]
 compiler = "0.12.0"
-exclude = ["template/*"]
+
 
 [template]
 path = "template"
